@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>今天，是你入党的第几天？_新华网</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="./static/css/main.css">
+    <style>
+        .weixin {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!-- 微信分享 -->
+<div class="weixin">
+    <div class="share-title">今天，是你入党的第几天？</div>
+    <div class="share-substr"></div>
+    <img class="share-img" src="http://www.xinhuanet.com/talking/zt2020/weidangqingsheng0623/images/sharelogo.jpg" width="300" height="300"/>
+</div>
+
+<div class="page-wrap">
+    <section class="page-item p1">
+        <div class="error-tip">
+            <img src="./static/images/wrong-tip.png" alt="">
+        </div>
+        <div class="page-item-wrap">
+            <div class="main-title">
+                <img src="./static/images/p1tit.png" alt="">
+            </div>
+            <div class="date-wrap">
+                <ul>
+                    <li class="year">
+                        <input id="year" type="number" class="mui-input-numbox" placeholder=""
+                               oninput="if(value>2020)value=2020;if(value.length>4)value=2020;"/>
+                    </li>
+                    <li class="month">
+                        <input id="month" type="number" class="mui-input-numbox" placeholder=""
+                               oninput="if(value>12)value=12;if(value.length>2)value=value.slice(0,2);"/>
+                    </li>
+                    <li class="day">
+                        <input id="day" type="number" class="mui-input-numbox" placeholder=""
+                               oninput="if(value>31)value=31;if(value.length>2)value=value.slice(0,2);"/>
+                    </li>
+                </ul>
+                <div class="okbtn"><img src="./static/images/okbtn.png" alt=""></div>
+            </div>
+
+        </div>
+    </section>
+    <section class="page-item p2">
+        <div class="page-item-wrap">
+            <div class="maintit">
+                <img src="./static/images/p2tit.png" alt="">
+            </div>
+            <div class="alldays"><span class="alldaynum"></span><span class="alldaytian"><img src="./static/images/day.png"
+                                                                                              alt=""></span></div>
+            <div class="bg99"><img src="./static/images/99.png" alt=""></div>
+            <div class="btn">
+                <ul class="clearfix">
+                    <li class="p2btn-1"><img src="./static/images/p2btn-1.png" alt=""></li>
+                    <li class="p2btn-2"><img src="./static/images/p2btn-2.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="infocon"><img src="./static/images/info.jpg" alt=""></div>
+            <div class="info">创作团队</div>
+        </div>
+    </section>
+    <section class="page-item p3">
+        <div class="page-item-wrap" id="canvascapture">
+            <div id="qrcode"><img src="./static/images/qr.gif" alt=""></div>
+            <div class="alldays"><span class="di"><img src="./static/images/p3day-di.png" alt=""></span><span
+                    class="alldaynum"></span><span class="tian"><img src="./static/images/p3day-tian.png" alt=""></span></div>
+        </div>
+
+        <div class="sharetip">长按保存图片分享给朋友</div>
+    </section>
+
+</div>
+
+<!--访问量通用js设置-->
+<div style="display:none">
+    <div id="fwl">010020020110000000000000011108101210683603</div>
+    <script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script>
+    <script type="text/javascript">wd_paramtracker("_wdxid=010020020110000000000000011108101210683603")</script>
+    <noscript>
+        <img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020020110000000000000011108101210683603" border="0"/>
+    </noscript>
+</div>
+
+<script type="text/javascript" src="./static/js/jquery.min.js"></script>
+<script type="text/javascript" src="./static/js/html2canvas.js"></script>
+<script type="text/javascript" src="./static/js/canvas2image.js"></script>
+<script type="text/javascript" src="./static/js/qrcode.min.js"></script>
+<script type="text/javascript" src="./static/js/main.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script src="./static/js/wxShare.js"></script>
+</body>
+</html>
