@@ -1,0 +1,358 @@
+@charset "UTF-8";
+@import "public";
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #ca000c;
+  background-size: cover;
+
+  .page-wrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .button-group {
+      font-size: 0;
+      margin-top: 0.8rem;
+
+      .button {
+        display: inline-block;
+        width: 3.8rem;
+        vertical-align: middle;
+
+        &:last-child {
+          margin-left: 0.4rem;
+        }
+      }
+    }
+
+    .page-item {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+
+      .background {
+        display: block;
+        width: 100%;
+      }
+    }
+    .page1 {
+      display: block;
+    }
+
+    .page1 {
+      font-size: 0;
+      z-index: 3;
+
+      .date-wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 9.1rem;
+      }
+
+      .error-tip {
+        width: 100%;
+        position: absolute;
+        top: 7.46667rem;
+        left: 0;
+        z-index: 6;
+        display: none;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .date-wrap {
+        width: 8rem;
+        margin: 0.4rem auto 0;
+
+        li {
+          display: inline-block;
+          width: 1.86667rem;
+          overflow: hidden;
+          padding: 0.13333rem 0.50667rem 0 0.13333rem;
+          -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+          height: 0.8rem;
+          /*
+                &.year {
+                  background: url(../images/date-nian.png) right top no-repeat;
+                  background-size: auto 100%;
+                }
+
+                &.month {
+                  background: url(../images/date-yue.png) right top no-repeat;
+                  background-size: auto 100%;
+                }
+
+                &.day {
+                  background: url(../images/date-ri.png) right top no-repeat;
+                  background-size: auto 100%;
+                }*/
+
+          input {
+            width: 1.6rem;
+            height: 0.61333rem;
+            line-height: 0.61333rem;
+            display: block;
+            font-size: 0.64rem;
+            border: none;
+            background: none;
+            //border-bottom: 0.05333rem solid #feffbd;
+            padding-bottom: 0.13333rem;
+            color: #feffbd;
+            text-align: center;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+          }
+
+          input#month {
+            margin-left: 0.16rem;
+          }
+
+          input::-webkit-input-placeholder {
+            color: rgba(254, 255, 189, 0.64);
+          }
+
+          input:-moz-placeholder {
+            /* Firefox 18- */
+            color: rgba(254, 255, 189, 0.64);
+          }
+
+          input::-moz-placeholder {
+            /* Firefox 19+ */
+            color: rgba(254, 255, 189, 0.64);
+          }
+
+          input:-ms-input-placeholder {
+            color: rgba(254, 255, 189, 0.64);
+          }
+
+        }
+
+        .conform-button {
+          width: 4.08rem;
+          margin: 0.26667rem auto 0;
+        }
+      }
+
+    }
+
+    .page2, .page3 {
+      .day-number {
+        display: block;
+        font-size: 32px;
+        position: absolute;
+        top: 5.33rem;
+        left: 2.35rem;
+        right: 0;
+        color: #feffbd;
+        width: 100px;
+        text-align: right;
+      }
+
+      .button-group {
+        position: absolute;
+        top: 13rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+    }
+
+    .page4, .page5 {
+      .day-number {
+        display: block;
+        font-size: 22px;
+        position: absolute;
+        top: 10.75rem;
+        left: 3.75rem;
+        right: 0;
+        color: #ca000c;
+        width: 100px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.p2 {
+  background-color: #fe2b08;
+  z-index: 2;
+
+  .page-item-wrap {
+    background: url(../images/p2bg.jpg) center top no-repeat;
+    background-size: cover;
+  }
+}
+
+.p3 {
+  z-index: 1;
+}
+
+.p2 .main-title {
+  width: 8rem;
+  margin: 3.46667rem auto 0;
+}
+
+.p2 .alldays {
+  font-size: 1.2rem;
+  line-height: 1.33333rem;
+  margin: 0.4rem auto;
+  color: #feedba;
+  font-weight: 600;
+  text-align: center;
+}
+
+.p2 .alldays .alldaynum {
+  text-shadow: #7b2315 -4px 3px 3px;
+}
+
+.p2 .alldays .alldaytian {
+  width: 1.46667rem;
+  display: inline-block;
+}
+
+.p2 .bg99 {
+  width: 100%;
+}
+
+.p2 .info {
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  margin-left: -1.06667rem;
+  width: 2.13333rem;
+  height: 0.90667rem;
+  line-height: 0.8rem;
+  background: #b61b05;
+  text-align: center;
+  border-radius: 0.13333rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e0be7b;
+}
+
+.p2 .info-icon {
+  display: none;
+}
+
+.p2 .btn {
+  position: absolute;
+  bottom: 1.86667rem;
+  width: 100%;
+  left: 0;
+}
+
+.p2 .btn ul {
+  width: 8rem;
+  margin: 0 auto;
+}
+
+.p2 .btn ul li {
+  display: inline-block;
+  width: 3.46667rem;
+  margin: 0 0.26667rem;
+  float: left;
+}
+
+.p3 {
+  background-color: #fe2b08;
+  background: url(../images/p3bg2.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+.p3 .page-item-wrap {
+  width: 8rem;
+  height: 14.24rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -4rem;
+  margin-top: -7.12rem;
+  background: url(../images/p3bg.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+.p3 .f-full {
+  width: 8rem;
+  height: 14.24rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -4rem;
+  margin-top: -7.12rem;
+  -webkit-box-shadow: 0.02667rem 0.02667rem 0.26667rem 0.10667rem #731106;
+  box-shadow: 0.02667rem 0.02667rem 0.26667rem 0.10667rem #731106;
+  z-index: 3;
+  z-index: 99;
+  display: block;
+}
+
+.p3 .sharetip {
+  position: absolute;
+  bottom: 0.26667rem;
+  left: 50%;
+  margin-left: -2.66667rem;
+  width: 5.33333rem;
+  height: 0.50667rem;
+  z-index: 100;
+  font-size: 0.42667rem;
+  text-align: center;
+  color: #830f02;
+}
+
+.p3 #qrcode {
+  width: 2.13333rem;
+  height: 2.13333rem;
+  position: absolute;
+  top: 6.74667rem;
+  left: 5.33333rem;
+}
+
+.p3 #qrcode img {
+  width: 2.13333rem;
+  height: 2.13333rem;
+}
+
+.p3 .alldays {
+  position: absolute;
+  top: 11.06667rem;
+  left: 0rem;
+  width: 100%;
+  text-align: center;
+}
+
+.p3 .alldays span {
+  display: inline-block;
+}
+
+.p3 .alldays .di {
+  width: 0.85333rem;
+}
+
+.p3 .alldays .alldaynum {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0 10px;
+  line-height: 0.85333rem;
+  vertical-align: bottom;
+  color: #fe2b08;
+}
+
+.p3 .alldays .tian {
+  width: 0.85333rem;
+}
+
+div.disno, .disno {
+  display: none;
+}

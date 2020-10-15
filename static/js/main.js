@@ -1,22 +1,53 @@
 $(function () {
-    var e = {};
-    $(".info").bind("click", function () {
-        if ($(this).hasClass("oninfo")) {
-            $(".info").removeClass("oninfo").text("制作团队");
-            $(".info-icon").fadeOut();
+    var global = {};
+    $('#customer-button, #employee-button').on('click', function(e) {
+        global.year = $("#year").val();
+        global.month = $("#month").val().replace(/\b(0+)/gi, "");
+        global.day = $("#day").val().replace(/\b(0+)/gi, "");
+        if (!global.year || !global.month || !global.day || global.year < 2009) {
+            $('.error-tip').fadeIn();
+            return;
+        }
+        global.date = global.year + '-' + global.month + '-' + global.day;
+        var dateTime = (new Date(global.date)).getTime();
+        var startTime = (new Date('2009-10-19')).getTime();
+        var nowTime = (new Date()).getTime();
+        if (dateTime < startTime || nowTime < dateTime) {
+            $('.error-tip').fadeIn();
+            return;
+        }
+        global.distanceDay = Math.floor((nowTime - dateTime) / 864e5);
+        global.currentType = e.currentTarget.id;
+        $('.day-number').text(global.distanceDay);
+        $('#page1').fadeOut();
+        if (global.currentType === 'customer-button') {
+            $('#page2').fadeIn();
         } else {
-            $(".info").addClass("oninfo").text("返  回");
-            $(".info-icon").fadeIn();
+            $('#page3').fadeIn();
         }
     });
 
-    $(".p2btn-2").bind("click", function () {
-        $(".p1 ").fadeIn()
+    $('.error-tip').on('click', function () {
+        $(this).fadeOut();
     });
 
-    $(".error-tip").bind("click", function () {
-        $(this).fadeOut()
+    $('.back').on('click', function(){
+        $('#page1').fadeIn();
+        $('#page2').fadeOut();
+        $('#page3').fadeOut();
     });
+
+    $('#page2 .toImage').on('click', function() {
+        $('#page4').fadeIn();
+        $('#page2').fadeOut();
+    });
+
+    $('#page3 .toImage').on('click', function() {
+        $('#page5').fadeIn();
+        $('#page3').fadeOut();
+    });
+
+
     $(".p2btn-1").bind("click", function () {
         !function () {
             var t = $("#canvascapture")[0], e = t.offsetWidth, n = t.offsetHeight, a = document.createElement("canvas");
@@ -52,7 +83,7 @@ $(function () {
         if (e.year = $("#year").val(), e.month = $("#month").val().replace(/\b(0+)/gi, ""), e.day = $("#day").val().replace(/\b(0+)/gi, ""), !e.year || !e.month || !e.day) return console.log("空值"), $(".wrongtip").fadeIn(), !1;
         if (e.date = e.year + "-" + e.month + "-" + e.day, console.log(e.date), !function (t, e, n) {
             var a = new Date(t), i = new Date(e), o = new Date(n), r = o.getTime() - a.getTime(),
-                d = Math.floor(r / 864e5), s = i.getTime() - o.getTime();
+              d = Math.floor(r / 864e5), s = i.getTime() - o.getTime();
             if (Math.floor(s / 864e5) < 0) return console.log(1), $(".wrongtip").fadeIn(), !1;
             if (d < 0) return console.log(2), $(".wrongtip").fadeIn(), !1;
             return !0

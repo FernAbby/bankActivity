@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>今天，是你入党的第几天？_新华网</title>
+    <title>今天，是你"入行"的第几天？</title>
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="./static/css/main.css">
     <style>
@@ -15,20 +15,18 @@
 <body>
 <!-- 微信分享 -->
 <div class="weixin">
-    <div class="share-title">今天，是你入党的第几天？</div>
-    <div class="share-substr"></div>
+    <div class="share-title">今天，是你"入行"的第几天？</div>
+    <div class="share-substr">我已加入花溪镇村银行XXX天......</div>
     <img class="share-img" src="http://www.xinhuanet.com/talking/zt2020/weidangqingsheng0623/images/sharelogo.jpg" width="300" height="300"/>
 </div>
 
 <div class="page-wrap">
-    <section class="page-item p1">
+    <section id="page1" class="page-item page1">
         <div class="error-tip">
             <img src="./static/images/wrong-tip.png" alt="">
         </div>
         <div class="page-item-wrap">
-            <div class="main-title">
-                <img src="./static/images/p1tit.png" alt="">
-            </div>
+            <img class="background" src="./static/images/page1-bg.jpg" alt="">
             <div class="date-wrap">
                 <ul>
                     <li class="year">
@@ -44,28 +42,55 @@
                                oninput="if(value>31)value=31;if(value.length>2)value=value.slice(0,2);"/>
                     </li>
                 </ul>
-                <div class="conform-button"><img src="./static/images/okbtn.png" alt=""></div>
+                <div class="button-group">
+                    <div id="customer-button" class="button">
+                        <img src="./static/images/button-customer.png" alt="">
+                    </div>
+                    <div id="employee-button" class="button">
+                        <img src="./static/images/button-employee.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <section class="page-item p2">
+
+    <section id="page2" class="page-item page2">
         <div class="page-item-wrap">
-            <div class="main-title">
-                <img src="./static/images/p2tit.png" alt="">
+            <img class="background" src="./static/images/page2-bg.jpg" alt="">
+            <div class="day-number">0</div>
+            <div class="button-group">
+                <div class="button toImage"><img src="./static/images/toImage-button.png" alt=""></div>
+                <div class="button back"><img src="./static/images/back-button.png" alt=""></div>
             </div>
-            <div class="alldays"><span class="alldaynum"></span><span class="alldaytian"><img src="./static/images/day.png"
-                                                                                              alt=""></span></div>
-            <div class="bg99"><img src="./static/images/99.png" alt=""></div>
-            <div class="btn">
-                <ul class="clearfix">
-                    <li class="p2btn-1"><img src="./static/images/p2btn-1.png" alt=""></li>
-                    <li class="p2btn-2"><img src="./static/images/p2btn-2.png" alt=""></li>
-                </ul>
-            </div>
-            <div class="info-icon"><img src="./static/images/info.jpg" alt=""></div>
-            <div class="info">创作团队</div>
         </div>
     </section>
+
+    <section id="page3" class="page-item page3">
+        <div class="page-item-wrap">
+            <img class="background" src="./static/images/page3-bg.jpg" alt="">
+            <div class="day-number">0</div>
+            <div class="button-group">
+                <div class="button toImage"><img src="./static/images/toImage-button.png" alt=""></div>
+                <div class="button back"><img src="./static/images/back-button.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page4" class="page-item page4">
+        <div class="page-item-wrap">
+            <img class="background" src="./static/images/page4-bg.jpg" alt="">
+            <div class="day-number">2234</div>
+        </div>
+    </section>
+
+    <section id="page5" class="page-item page5">
+        <div class="page-item-wrap">
+            <img class="background" src="./static/images/page5-bg.jpg" alt="">
+            <div class="day-number">2234</div>
+        </div>
+    </section>
+
+
     <section class="page-item p3">
         <div class="page-item-wrap" id="canvascapture">
             <div id="qrcode"><img src="./static/images/qr.gif" alt=""></div>
@@ -73,7 +98,7 @@
                     class="alldaynum"></span><span class="tian"><img src="./static/images/p3day-tian.png" alt=""></span></div>
         </div>
 
-        <div class="share-tip">长按保存图片分享给朋友</div>
+<!--        <div class="share-tip">长按保存图片分享给朋友</div>-->
     </section>
 
 </div>
