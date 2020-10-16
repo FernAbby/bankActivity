@@ -253,65 +253,89 @@ body {
   background-size: cover;
 }
 body .page-wrap {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
-body .page-wrap .button-group {
-  font-size: 0;
-  margin-top: 0.8rem;
+body .page-item {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
-body .page-wrap .button-group .button {
+body .page-item .container {
+  padding-top: 2.32rem;
+}
+body .page-item .container .logo-icon {
+  display: block;
+  width: 3.12rem;
+  height: 3.12rem;
+  margin: 0 auto;
+  background: url(../images/logo-icon.png) no-repeat center;
+  background-size: 100% 100%;
+}
+body .page-item .container .button-group {
+  display: block;
+  width: 8.54rem;
+  margin: 0.86rem auto 0;
+  font-size: 0;
+  text-align: center;
+}
+body .page-item .container .button-group .button {
   display: inline-block;
-  width: 3.8rem;
+  width: 2.6rem;
+  height: 0.75rem;
   vertical-align: middle;
 }
-body .page-wrap .button-group .button:last-child {
-  margin-left: 0.4rem;
+body .page-item .container .button-group .button:first-child {
+  background: url(../images/customer-button.png) no-repeat center;
+  background-size: 100% 100%;
 }
-body .page-wrap .page-item {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
+body .page-item .container .button-group .button:last-child {
+  background: url(../images/employee-button.png) no-repeat center;
+  background-size: 100% 100%;
+  margin-left: 1rem;
 }
-body .page-wrap .page-item .background {
+body .page-item .container .footer {
   display: block;
-  width: 100%;
+  width: 4.5333rem;
+  height: 0.6933rem;
+  margin: 2.63rem auto 0;
+  background: url(../images/footer-icon.png) no-repeat center;
+  background-size: 100% 100%;
 }
-body .page-wrap .page1 {
+body #page1 {
   display: block;
+  background: url(../images/page1-bg.png) no-repeat center;
+  background-size: 100% 100%;
 }
-body .page-wrap .page1 {
-  font-size: 0;
-  z-index: 3;
-}
-body .page-wrap .page1 .date-wrap {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 9.1rem;
-}
-body .page-wrap .page1 .error-tip {
+body #page1 .error-tip {
   width: 100%;
   position: absolute;
   top: 7.46667rem;
   left: 0;
-  z-index: 6;
+  z-index: 10;
   display: none;
 }
-body .page-wrap .page1 .error-tip img {
+body #page1 .error-tip img {
   width: 100%;
 }
-body .page-wrap .page1 .date-wrap {
-  width: 8rem;
-  margin: 0.4rem auto 0;
+body #page1 .slogan {
+  display: block;
+  width: 8.54rem;
+  min-height: 2.3rem;
+  margin: 0.96rem auto 0;
+  position: relative;
 }
-body .page-wrap .page1 .date-wrap li {
+body #page1 .slogan .input-group {
+  position: absolute;
+  left: 1rem;
+  right: 0;
+  bottom: 0;
+  width: 8rem;
+}
+body #page1 .slogan .input-group li {
   display: inline-block;
   width: 1.86667rem;
   overflow: hidden;
@@ -319,23 +343,8 @@ body .page-wrap .page1 .date-wrap li {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0.8rem;
-  /*
-        &.year {
-          background: url(../images/date-nian.png) right top no-repeat;
-          background-size: auto 100%;
-        }
-
-        &.month {
-          background: url(../images/date-yue.png) right top no-repeat;
-          background-size: auto 100%;
-        }
-
-        &.day {
-          background: url(../images/date-ri.png) right top no-repeat;
-          background-size: auto 100%;
-        }*/
 }
-body .page-wrap .page1 .date-wrap li input {
+body #page1 .slogan .input-group li input {
   width: 1.6rem;
   height: 0.61333rem;
   line-height: 0.61333rem;
@@ -343,232 +352,154 @@ body .page-wrap .page1 .date-wrap li input {
   font-size: 0.64rem;
   border: none;
   background: none;
+  border-bottom: 0.05333rem solid #feffbd;
   padding-bottom: 0.13333rem;
   color: #feffbd;
   text-align: center;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-body .page-wrap .page1 .date-wrap li input#month {
-  margin-left: 0.16rem;
+body #page1 .slogan .input-group li.month {
+  width: 1.5rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
 }
-body .page-wrap .page1 .date-wrap li input::-webkit-input-placeholder {
+body #page1 .slogan .input-group li.month input#month {
+  width: 0.9rem;
+}
+body #page1 .slogan .input-group li.day {
+  width: 1.5rem;
+  padding-left: 0.05rem;
+  padding-right: 0.1rem;
+}
+body #page1 .slogan .input-group li.day input#month, body #page1 .slogan .input-group li.day input#day {
+  width: 0.9rem;
+}
+body #page1 .slogan .input-group li input::-webkit-input-placeholder {
   color: rgba(254, 255, 189, 0.64);
 }
-body .page-wrap .page1 .date-wrap li input:-moz-placeholder {
+body #page1 .slogan .input-group li input:-moz-placeholder {
   /* Firefox 18- */
   color: rgba(254, 255, 189, 0.64);
 }
-body .page-wrap .page1 .date-wrap li input::-moz-placeholder {
+body #page1 .slogan .input-group li input::-moz-placeholder {
   /* Firefox 19+ */
   color: rgba(254, 255, 189, 0.64);
 }
-body .page-wrap .page1 .date-wrap li input:-ms-input-placeholder {
+body #page1 .slogan .input-group li input:-ms-input-placeholder {
   color: rgba(254, 255, 189, 0.64);
 }
-body .page-wrap .page1 .date-wrap .conform-button {
-  width: 4.08rem;
-  margin: 0.26667rem auto 0;
+body #page2 {
+  background: url(../images/page2-bg.png) no-repeat center;
+  background-size: 100% 100%;
 }
-body .page-wrap .page2 .day-number, body .page-wrap .page3 .day-number {
+body #page2 .container {
+  padding-top: 1.28rem;
+}
+body #page2 .container .number-icon {
+  width: 4.26666rem;
+  margin: 0.3rem auto 0;
+}
+body #page2 .container .slogan {
   display: block;
-  font-size: 32px;
+  position: relative;
+  font-size: 0;
+}
+body #page2 .container .slogan[type=customer] {
+  width: 7.52rem;
+  height: 3.733rem;
+  margin: 0.84rem auto 0;
+  background: url(../images/page2-slogan-customer.png) no-repeat center;
+  background-size: 100% 100%;
+}
+body #page2 .container .slogan[type=customer] .day-number {
   position: absolute;
-  top: 5.33rem;
-  left: 2.35rem;
-  right: 0;
-  color: #feffbd;
-  width: 100px;
+  right: 4rem;
+  top: 1.82rem;
+  font-size: 1.0133rem;
+  font-weight: 500;
   text-align: right;
+  color: #fcecbc;
 }
-body .page-wrap .page2 .button-group, body .page-wrap .page3 .button-group {
+body #page2 .container .slogan[type=employee] {
+  width: 5.2rem;
+  height: 3.82rem;
+  margin: 0.72rem auto 0;
+  background: url(../images/page2-slogan-employee.png) no-repeat center;
+  background-size: 100% 100%;
+}
+body #page2 .container .slogan[type=employee] .day-number {
   position: absolute;
-  top: 13rem;
-  left: 0;
-  right: 0;
-  text-align: center;
+  right: 2.8rem;
+  top: 1.9rem;
+  font-size: 1.0133rem;
+  font-weight: 500;
+  text-align: right;
+  color: #fcecbc;
 }
-body .page-wrap .page4 .day-number, body .page-wrap .page5 .day-number {
-  display: block;
-  font-size: 22px;
-  position: absolute;
-  top: 10.75rem;
-  left: 3.75rem;
-  right: 0;
-  color: #ca000c;
-  width: 100px;
-  text-align: center;
-}
-
-.p2 {
-  background-color: #fe2b08;
-  z-index: 2;
-}
-.p2 .page-item-wrap {
-  background: url(../images/p2bg.jpg) center top no-repeat;
-  background-size: cover;
-}
-
-.p3 {
-  z-index: 1;
-}
-
-.p2 .main-title {
-  width: 8rem;
-  margin: 3.46667rem auto 0;
-}
-
-.p2 .alldays {
-  font-size: 1.2rem;
-  line-height: 1.33333rem;
-  margin: 0.4rem auto;
-  color: #feedba;
-  font-weight: 600;
-  text-align: center;
-}
-
-.p2 .alldays .alldaynum {
-  text-shadow: #7b2315 -4px 3px 3px;
-}
-
-.p2 .alldays .alldaytian {
-  width: 1.46667rem;
-  display: inline-block;
-}
-
-.p2 .bg99 {
-  width: 100%;
-}
-
-.p2 .info {
-  position: absolute;
-  bottom: 0rem;
-  left: 50%;
-  margin-left: -1.06667rem;
-  width: 2.13333rem;
-  height: 0.90667rem;
-  line-height: 0.8rem;
-  background: #b61b05;
-  text-align: center;
-  border-radius: 0.13333rem;
-  font-size: 14px;
-  font-weight: 400;
-  color: #e0be7b;
-}
-
-.p2 .info-icon {
-  display: none;
-}
-
-.p2 .btn {
-  position: absolute;
-  bottom: 1.86667rem;
-  width: 100%;
-  left: 0;
-}
-
-.p2 .btn ul {
-  width: 8rem;
-  margin: 0 auto;
-}
-
-.p2 .btn ul li {
-  display: inline-block;
-  width: 3.46667rem;
-  margin: 0 0.26667rem;
-  float: left;
-}
-
-.p3 {
-  background-color: #fe2b08;
-  background: url(../images/p3bg2.jpg) center top no-repeat;
-  background-size: cover;
-}
-
-.p3 .page-item-wrap {
-  width: 8rem;
-  height: 14.24rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -4rem;
-  margin-top: -7.12rem;
-  background: url(../images/p3bg.jpg) center top no-repeat;
-  background-size: cover;
-}
-
-.p3 .f-full {
-  width: 8rem;
-  height: 14.24rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -4rem;
-  margin-top: -7.12rem;
-  -webkit-box-shadow: 0.02667rem 0.02667rem 0.26667rem 0.10667rem #731106;
-  box-shadow: 0.02667rem 0.02667rem 0.26667rem 0.10667rem #731106;
-  z-index: 3;
-  z-index: 99;
+body #page2 .container .slogan img {
   display: block;
 }
-
-.p3 .sharetip {
-  position: absolute;
-  bottom: 0.26667rem;
-  left: 50%;
-  margin-left: -2.66667rem;
-  width: 5.33333rem;
-  height: 0.50667rem;
-  z-index: 100;
-  font-size: 0.42667rem;
-  text-align: center;
-  color: #830f02;
+body #page2 .container .button-group {
+  margin: 0.5rem auto 0;
 }
-
-.p3 #qrcode {
-  width: 2.13333rem;
-  height: 2.13333rem;
-  position: absolute;
-  top: 6.74667rem;
-  left: 5.33333rem;
+body #page2 .container .button-group .button:first-child {
+  background: url(../images/to-image.png) no-repeat center;
+  background-size: 100% 100%;
 }
-
-.p3 #qrcode img {
-  width: 2.13333rem;
-  height: 2.13333rem;
+body #page2 .container .button-group .button:last-child {
+  background: url(../images/go-back.png) no-repeat center;
+  background-size: 100% 100%;
+  margin-left: 1rem;
 }
-
-.p3 .alldays {
-  position: absolute;
-  top: 11.06667rem;
-  left: 0rem;
+body #page2 .container .footer {
+  margin: 0.56rem auto 0;
+}
+body #page3 {
+  background: url(../images/page3-bg.png) no-repeat center;
+  background-size: 100% 100%;
+}
+body #page3 .container {
+  padding-top: 1.387rem;
+}
+body #page3 .container .slogan {
+  width: 8.8533rem;
+  min-height: 2.28rem;
+  margin: 0.9333rem auto 0;
+  background: url(../images/page3-slogan.png) no-repeat center;
+  background-size: 100% 100%;
+}
+body #page3 .container .result {
+  position: relative;
   width: 100%;
+  height: 4.3467rem;
+  margin-top: 0.45rem;
+}
+body #page3 .container .result[type=customer] {
+  background: url(../images/result-customer.png) no-repeat center;
+  background-size: 100% 100%;
+}
+body #page3 .container .result[type=employee] {
+  background: url(../images/result-employee.png) no-repeat center;
+  background-size: 100% 100%;
+}
+body #page3 .container .result .day-number {
+  width: 1.2rem;
+  position: absolute;
+  right: 2.3rem;
+  top: 2.28rem;
+  font-size: 0.48rem;
+  font-weight: 700;
   text-align: center;
+  color: #fcecbc;
 }
-
-.p3 .alldays span {
-  display: inline-block;
+body #page3 .container .qr-code {
+  width: 2.2667rem;
+  height: 2.2667rem;
+  margin: 0.6rem auto 0;
 }
-
-.p3 .alldays .di {
-  width: 0.85333rem;
-}
-
-.p3 .alldays .alldaynum {
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0 10px;
-  line-height: 0.85333rem;
-  vertical-align: bottom;
-  color: #fe2b08;
-}
-
-.p3 .alldays .tian {
-  width: 0.85333rem;
-}
-
-div.disno, .disno {
-  display: none;
+body #page3 .container .footer {
+  margin: 0.58rem auto 0;
 }
 
 /*# sourceMappingURL=main.css.map */
