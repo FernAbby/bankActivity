@@ -1,5 +1,7 @@
 $(function () {
-    var global = {};
+    var global = {
+        step: 1,
+    };
     $('#customer, #employee').on('click', function(e) {
         global.year = $("#year").val();
         global.month = $("#month").val().replace(/\b(0+)/gi, "");
@@ -24,27 +26,33 @@ $(function () {
         $('#page3 .result').attr('type', global.currentType);
         $('#page1').fadeOut();
         $('#page2').fadeIn();
+        global.step = 2;
     });
 
     $('.error-tip').on('click', function () {
         $(this).fadeOut();
     });
 
-    $('.go-back').on('click', function(){
+    $('#page2 .go-back').on('click', function(){
         $('#page1').fadeIn();
         $('#page2').fadeOut();
         $('#page3').fadeOut();
+        global.step = 1;
     });
 
     $('#page2 .to-image').on('click', function() {
         $('#page3').fadeIn();
         $('#page2').fadeOut();
+        global.step = 3;
+        setTimeout(function() {
+            save2Image();
+        }, 800);
     });
 
     var t = $(window).width(), n = ($(window).height(), t / 10);
     n = 80 < n ? 80 : n, $("html").attr("style", "font-size:" + n + "px");
 
-    // 长按方法
+   /* // 长按方法
     $.fn.longPress = function(fn) {
         var timeout = 0;
         var $this = this;
@@ -57,22 +65,19 @@ $(function () {
                 clearTimeout(timeout); // 长按时间少于800ms，不会执行传入的方法
             }, false);
         }
-    };
+    };*/
 
-    function canvas2Image(canvas, width, height) {
-        var retCanvas = document.createElement('canvas');
-        var retCtx = retCanvas.getContext('2d');
-        retCanvas.width = width;
-        retCanvas.height = height;
-        retCtx.drawImage(canvas, 0, 0, width, height, 0, 0, width, height);
+    function canvas2Image(canvas) {
+        // document.body.appendChild(canvas);
         var img = document.createElement('img');
-        img.src = retCanvas.toDataURL('image/jpeg');  // 可以根据需要更改格式
+        // img.setAttribute('crossOrigin', 'anonymous');
+        img.src = canvas.toDataURL('image/jpeg');  // 可以根据需要更改格式
         return img;
     }
 
     function save2Image() {
         // 想要保存的图片节点
-        var dom = document.getElementById('root');
+        var dom = document.getElementById('page3');
 
         // 创建一个新的canvas
         var Canvas = document.createElement('canvas');
@@ -92,9 +97,9 @@ $(function () {
             allowTaint: true,
             useCORS: true,
             logging: true,
-            width: width + 'px',
-            height: height + 'px',
-        }).then(function (canvas) {
+            width: width,
+            height: height,
+        }).then(function(canvas) {
             var context = canvas.getContext('2d');
             // 关闭抗锯齿形
             context.mozImageSmoothingEnabled = false;
@@ -103,12 +108,15 @@ $(function () {
             context.imageSmoothingEnabled = false;
             // canvas转化为图片
             var resultImage = canvas2Image(canvas, canvas.width, canvas.height);
-            document.body.appendChild(resultImage);
+            resultImage.classList = ['result-image'];
             resultImage.style.cssText = "width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;";
+            document.body.appendChild(resultImage);
         });
     }
 
-    $('#root').longPress(function() {
-        save2Image();
-    });
+    /*$('#capture').longPress(function() {
+        if (global.step === 3 && !$('img.result-image').length) {
+            save2Image();
+        }
+    });*/
 });
