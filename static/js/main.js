@@ -44,9 +44,6 @@ $(function () {
         $('#page3').fadeIn();
         $('#page2').fadeOut();
         global.step = 3;
-        // setTimeout(function() {
-        //     save2Image();
-        // }, 800);
     });
 
     var t = $(window).width(), n = ($(window).height(), t / 10);
@@ -79,8 +76,8 @@ $(function () {
 
         // 创建一个新的canvas
         var Canvas = document.createElement('canvas');
-        var width = document.body.offsetWidth;  // 可见屏幕的宽
-        var height = document.body.offsetHeight;  // 可见屏幕的高
+        var width = $('.page-wrap').width();  // 可见屏幕的宽
+        var height = $('.page-wrap').height();  // 可见屏幕的高
         var scale = window.devicePixelRadio || 1;  // 设备的devicePixelRadio
 
         // 将Canvas画布放大scale倍，然后放在小的屏幕里，解决模糊问题
@@ -107,7 +104,7 @@ $(function () {
             // canvas转化为图片
             var resultImage = canvas2Image(canvas, canvas.width, canvas.height);
             resultImage.classList = ['result-image'];
-            resultImage.style.cssText = "width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;";
+            resultImage.style.cssText = "width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:100";
             document.body.appendChild(resultImage);
         });
     }
