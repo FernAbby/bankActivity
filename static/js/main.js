@@ -8,9 +8,9 @@ $(function () {
             $('.error-tip').fadeIn();
             return;
         }
-        global.date = global.year + '-' + global.month + '-' + global.day;
+        global.date = global.year + '/' + global.month + '/' + global.day;
         var dateTime = (new Date(global.date)).getTime();
-        var startTime = (new Date('2009-10-19')).getTime();
+        var startTime = (new Date('2009/10/19')).getTime();
         var nowTime = (new Date()).getTime();
         if (dateTime < startTime || nowTime < dateTime) {
             $('.error-tip').fadeIn();
@@ -19,6 +19,7 @@ $(function () {
         global.distanceDay = Math.floor((nowTime - dateTime) / 864e5);
         global.currentType = e.currentTarget.id;
         $('.day-number').text(global.distanceDay);
+        $('.share-substr').html('今天是我加入花村行的第' + global.distanceDay + '天，你呢？');
         $('#page2 .slogan').attr('type', global.currentType);
         $('#page3 .result').attr('type', global.currentType);
         $('#page1').fadeOut();
@@ -41,5 +42,73 @@ $(function () {
     });
 
     var t = $(window).width(), n = ($(window).height(), t / 10);
-    n = 80 < n ? 80 : n, $("html").attr("style", "font-size:" + n + "px")
+    n = 80 < n ? 80 : n, $("html").attr("style", "font-size:" + n + "px");
+
+    // 长按方法
+    $.fn.longPress = function(fn) {
+        var timeout = 0;
+        var $this = this;
+        for (var i = 0; i < $this.length; i++) {
+            var tempIndex = i;
+            $this[tempIndex].addEventListener('touchstart', function() {
+                timeout = setTimeout(fn, 800); // 长按时间超过800ms，则执行传入的方法
+            }, false);
+            $this[tempIndex].addEventListener('touchend', function () {
+                clearTimeout(timeout); // 长按时间少于800ms，不会执行传入的方法
+            }, false);
+        }
+    };
+
+    function canvas2Image(canvas, width, height) {
+        var retCanvas = document.createElement('canvas');
+        var retCtx = retCanvas.getContext('2d');
+        retCanvas.width = width;
+        retCanvas.height = height;
+        retCtx.drawImage(canvas, 0, 0, width, height, 0, 0, width, height);
+        var img = document.createElement('img');
+        img.src = retCanvas.toDataURL('image/jpeg');  // 可以根据需要更改格式
+        return img;
+    }
+
+    function save2Image() {
+        // 想要保存的图片节点
+        var dom = document.getElementById('root');
+
+        // 创建一个新的canvas
+        var Canvas = document.createElement('canvas');
+        var width = document.body.offsetWidth;  // 可见屏幕的宽
+        var height = document.body.offsetHeight;  // 可见屏幕的高
+        var scale = window.devicePixelRadio || 1;  // 设备的devicePixelRadio
+
+        // 将Canvas画布放大scale倍，然后放在小的屏幕里，解决模糊问题
+        Canvas.width = width * scale;
+        Canvas.height = height * scale;
+        Canvas.getContext('2d').scale(scale, scale);
+
+        html2canvas(dom, {
+            canvas: Canvas,
+            scale: scale,
+            backgroundColor: 'transparent',
+            allowTaint: true,
+            useCORS: true,
+            logging: true,
+            width: width + 'px',
+            height: height + 'px',
+        }).then(function (canvas) {
+            var context = canvas.getContext('2d');
+            // 关闭抗锯齿形
+            context.mozImageSmoothingEnabled = false;
+            context.webkitImageSmoothingEnabled = false;
+            context.msImageSmoothingEnabled = false;
+            context.imageSmoothingEnabled = false;
+            // canvas转化为图片
+            var resultImage = canvas2Image(canvas, canvas.width, canvas.height);
+            document.body.appendChild(resultImage);
+            resultImage.style.cssText = "width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;";
+        });
+    }
+
+    $('#root').longPress(function() {
+        save2Image();
+    });
 });
