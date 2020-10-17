@@ -76,8 +76,9 @@ $(function () {
 
         // 创建一个新的canvas
         var Canvas = document.createElement('canvas');
-        var width = $('.page-wrap').width();  // 可见屏幕的宽
-        var height = $('.page-wrap').height();  // 可见屏幕的高
+        var width = $('#page3').width();  // 可见屏幕的宽
+        var height = $('#page3').height();  // 可见屏幕的高
+        console.log(width, height);
         var scale = window.devicePixelRadio || 1;  // 设备的devicePixelRadio
 
         // 将Canvas画布放大scale倍，然后放在小的屏幕里，解决模糊问题
