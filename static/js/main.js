@@ -44,15 +44,15 @@ $(function () {
         $('#page3').fadeIn();
         $('#page2').fadeOut();
         global.step = 3;
-        setTimeout(function() {
-            save2Image();
-        }, 800);
+        // setTimeout(function() {
+        //     save2Image();
+        // }, 800);
     });
 
     var t = $(window).width(), n = ($(window).height(), t / 10);
     n = 80 < n ? 80 : n, $("html").attr("style", "font-size:" + n + "px");
 
-   /* // 长按方法
+    // 长按方法
     $.fn.longPress = function(fn) {
         var timeout = 0;
         var $this = this;
@@ -65,12 +65,10 @@ $(function () {
                 clearTimeout(timeout); // 长按时间少于800ms，不会执行传入的方法
             }, false);
         }
-    };*/
+    };
 
     function canvas2Image(canvas) {
-        // document.body.appendChild(canvas);
         var img = document.createElement('img');
-        // img.setAttribute('crossOrigin', 'anonymous');
         img.src = canvas.toDataURL('image/jpeg');  // 可以根据需要更改格式
         return img;
     }
@@ -114,9 +112,9 @@ $(function () {
         });
     }
 
-    /*$('#capture').longPress(function() {
+    $('#capture').longPress(function() {
         if (global.step === 3 && !$('img.result-image').length) {
             save2Image();
         }
-    });*/
+    });
 });
