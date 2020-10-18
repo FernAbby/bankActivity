@@ -43,6 +43,7 @@ $(function () {
     $('#page2 .to-image').on('click', function() {
         $('#page3').fadeIn();
         $('#page2').fadeOut();
+        $('.save-tip').fadeIn();
         global.step = 3;
     });
 

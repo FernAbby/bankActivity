@@ -25,6 +25,8 @@
       <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/page2-slogan-customer.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/page2-slogan-customer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/page2-slogan-employee.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/page2-slogan-employee.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,7 +39,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5217723">
+    <splitter split-orientation="horizontal" split-proportion="0.5080214">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -52,8 +54,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/static/js/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="143">
-                  <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+                <state relative-caret-position="205">
+                  <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -61,10 +63,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/css/main.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="12" />
+                <state relative-caret-position="222">
+                  <caret line="19" column="13" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="13" />
                   <folding>
-                    <element signature="e#3817#5655#0" />
+                    <element signature="e#3930#5651#0" />
                   </folding>
                 </state>
               </provider>
@@ -86,7 +88,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
+                <state relative-caret-position="-2557">
                   <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
                 </state>
               </provider>
@@ -95,8 +97,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="869">
-                  <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+                <state relative-caret-position="1596">
+                  <caret line="85" column="24" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -172,18 +174,6 @@
               <item name="bankActivity" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="bankActivity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bankActivity" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bankActivity" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bankActivity" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -237,7 +227,7 @@
       <workItem from="1602766619141" duration="11516000" />
       <workItem from="1602853077697" duration="13045000" />
       <workItem from="1602905979303" duration="158000" />
-      <workItem from="1602907965711" duration="8417000" />
+      <workItem from="1602907965711" duration="10253000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 临时提交">
       <created>1602756006742</created>
@@ -281,17 +271,31 @@
       <option name="project" value="LOCAL" />
       <updated>1602923419515</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix: 修复截图不全问题">
+      <created>1602924369484</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602924369484</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: 修复截图不全问题">
+      <created>1602924825114</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602924825114</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33136000" />
+    <option name="totallyTimeSpent" value="34972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1330" height="809" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14744079" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24751718" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -350,7 +354,8 @@
     <MESSAGE value="feat: 细节调整" />
     <MESSAGE value="feat: 最终提交" />
     <MESSAGE value="feat: 长按保存" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 长按保存" />
+    <MESSAGE value="fix: 修复截图不全问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 修复截图不全问题" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="182" key="EditFileWatcherDialog" timestamp="1602748614192">
@@ -408,32 +413,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="-2557">
           <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="869">
-          <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+        <state relative-caret-position="1596">
+          <caret line="85" column="24" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="222">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="13" />
           <folding>
-            <element signature="e#3817#5655#0" />
+            <element signature="e#3930#5651#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="205">
+          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
         </state>
       </provider>
     </entry>

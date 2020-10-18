@@ -261,6 +261,16 @@ body .page-wrap {
   min-height: 100vh;
   position: relative;
 }
+body .page-wrap .save-tip {
+  display: none;
+  font-size: 12px;
+  position: fixed;
+  color: white;
+  bottom: 0.1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
 body .page-item {
   display: none;
   width: 100vw;
@@ -419,7 +429,7 @@ body #page2 .container .slogan[type=customer] {
 }
 body #page2 .container .slogan[type=customer] .day-number {
   position: absolute;
-  right: 4rem;
+  right: 3.4rem;
   top: 1.82rem;
   font-size: 1.0133rem;
   font-weight: 500;
@@ -435,7 +445,7 @@ body #page2 .container .slogan[type=employee] {
 }
 body #page2 .container .slogan[type=employee] .day-number {
   position: absolute;
-  right: 2.8rem;
+  right: 2.3rem;
   top: 1.9rem;
   font-size: 1.0133rem;
   font-weight: 500;
