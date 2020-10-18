@@ -259,12 +259,15 @@ body {
 body .page-wrap {
   width: 100vw;
   min-height: 100vh;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 body .page-wrap .save-tip {
   display: none;
   font-size: 12px;
-  position: fixed;
+  position: absolute;
   color: white;
   bottom: 0.1rem;
   left: 0;
