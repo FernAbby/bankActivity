@@ -258,21 +258,20 @@ body {
 }
 body .page-wrap {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
+  bottom: 0;
+  overflow: auto;
 }
 body .page-wrap .save-tip {
-  display: none;
   font-size: 12px;
-  position: absolute;
+  line-height: 12px;
   color: white;
-  bottom: 0.1rem;
-  left: 0;
-  right: 0;
   text-align: center;
+  margin-top: 0.4rem;
 }
 body .page-item {
   display: none;
@@ -528,7 +527,7 @@ body #page3 .container .qr-code {
   margin: 0.6rem auto 0;
 }
 body #page3 .container .footer {
-  margin: 0.58rem auto 0;
+  margin: 0.4rem auto 0;
 }
 
 /*# sourceMappingURL=main.css.map */
